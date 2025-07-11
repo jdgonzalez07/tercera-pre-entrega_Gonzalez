@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Buscar Libro{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Buscar Libro</h2>
+    <form method="get">
+        <input type="text" name="titulo" class="form-control" placeholder="Ingrese título">
+        <button type="submit" class="btn btn-primary mt-2">Buscar</button>
+    </form>
+    {% if libros %}
+        <h3 class="mt-4">Resultados:</h3>
+        <ul>
+            {% for libro in libros %}
+                <li>{{ libro.titulo }} - {{ libro.autor.nombre }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+{% endblock %}

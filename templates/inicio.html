@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Inicio - Librería{% endblock %}
+{% block content %}
+<header class="masthead">
+    <div class="container px-4 px-lg-5 h-100">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <h1 class="text-white font-weight-bold">Bienvenido a la Librería</h1>
+                <hr class="divider" />
+                <div class="d-grid gap-2 d-md-block mt-4">
+                    <a href="{% url 'agregar_libro' %}" class="btn btn-light btn-lg m-2">Agregar Libro</a>
+                    <a href="{% url 'agregar_autor' %}" class="btn btn-light btn-lg m-2">Agregar Autor</a>
+                    <a href="{% url 'agregar_editorial' %}" class="btn btn-light btn-lg m-2">Agregar Editorial</a>
+                    <a href="{% url 'buscar_libro' %}" class="btn btn-outline-light btn-lg m-2">Buscar Libro</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
